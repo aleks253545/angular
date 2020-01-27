@@ -1,0 +1,14 @@
+<app-display-bar class='display-bar' ></app-display-bar>
+      <div class='my-list' *ngIf="display==='block'; else lineRep">
+        <app-block-repos class="block-repos" 
+        *ngFor="let item of repos.slice(0,viewIndex)"
+        [item]='item' ></app-block-repos>
+    </div>
+    <ng-template #lineRep >
+        <div class='my-list'>
+            <app-line-repos class='line-repos'
+            *ngFor="let item of repos.slice(0,viewIndex)"
+            [item]='item' 
+            ></app-line-repos>
+        </div>
+    </ng-template>

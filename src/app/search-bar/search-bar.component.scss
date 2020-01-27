@@ -1,0 +1,29 @@
+
+.search_panel_select{
+    width: 20%;
+    border:none;
+    border-bottom: 1.2px solid blue;
+    font-size: 1.1rem;
+}
+.search_panel_select:focus{
+    outline: none;
+}
+.search_panel_input{
+    border:none;
+    border-bottom: 1.2px solid blue;
+    font-size: 1.1rem;
+    
+}
+.search_panel_input:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+.search_panel_button{
+    color: white;
+    text-transform: uppercase;
+    width: 120px;
+    height: 35px;
+    background-color: blue;
+    border: none;
+    font-size: 1.2rem;
+}

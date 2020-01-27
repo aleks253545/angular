@@ -1,0 +1,29 @@
+.my-list{
+        display: flex;
+        width: 60rem;
+        margin:1rem auto ;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+}
+.line-repos{
+    padding-top:20px;
+    border-top:1px solid #E1E4E8;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:1rem;
+    width: 100%;
+}
+.block-repos{
+        padding:25px 40px;
+        width: 45%;
+        height: 22rem;
+        border:1px solid #E1E4E8;
+        display: flex;
+        flex-direction: column;
+        margin-bottom:1rem;
+        box-sizing: border-box;
+        align-items: center;
+        &:nth-child(2n){
+                margin-left: auto;
+        }
+}

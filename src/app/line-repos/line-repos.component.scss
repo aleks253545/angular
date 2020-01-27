@@ -1,0 +1,58 @@
+
+.checkbox{
+    display: none;
+}
+form{
+    width: 30px;
+}
+.label{
+    width: 20px;
+    height: 20px;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+.mark{
+    width: 14px;
+    height: 14px;
+}
+
+input:checked + .label>.mark{
+    background-color: blue;
+}
+.info{
+    margin: 0 auto 0 2rem;
+}
+.name{
+    margin: 0;
+    font-size: 1.8rem;
+    color: blue;
+}
+.tags{
+    display: flex;
+}
+.tag{
+    margin-top: 1rem;
+    background-color: #F1F8FE;
+    border-radius: 15px;
+    padding: 5px 10px;
+    height: 25px;
+    margin-right:1rem;
+}
+.subname{
+    font-weight: 500;
+}
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Vector{
+    margin-left: 10px;
+}
+.likes{
+    display: flex;
+    align-items: center;
+}

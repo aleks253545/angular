@@ -1,0 +1,19 @@
+
+    <select class='search_panel_select' >
+        <option value="grapefruit">Repositories</option>
+    </select>
+    <select class='search_panel_select' #selectLnaguage [(ngModel)]="languageValue">
+        <option value="JavaScript">JavaScript</option>
+        <option value="css">css</option>
+        <option value="Html">Html</option>
+        <option value="php">php</option>
+        <option value="ruby">ruby</option>
+        <option value="c++">c++</option>
+        <option value="c#">c#</option>
+        <option value="phython">phython</option>
+        <option value="java">java</option>
+        <option value="go">go</option>
+        <option value="haskel">haskel</option>
+    </select>
+    <input type='text' class='search_panel_input' [(ngModel)]="tagValue" >
+    <button class='search_panel_button' (click)="sendInfo()">Search</button>

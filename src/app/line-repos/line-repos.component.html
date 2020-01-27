@@ -1,0 +1,15 @@
+
+    <input  class='checkbox' type="checkbox" [id]="item.id" [checked]="item.like" />
+    <label class='label' for="item.id" (click)="clickLike(item.id)"> <div class="mark"></div> </label>
+<div class='info'>
+    <h3 class='name'>{{item.name}}</h3>
+    <span class='subname'>{{item.description}}</span>
+    <div class='tags'>
+        <div class='tag' *ngIf="item.tag">{{item.tag}}</div>
+        <div class='tag' *ngIf="item.language">{{item.language}}</div>
+    </div>
+</div>
+<div class='more'>
+    <span class='likes'><span>{{item.watchers}}</span><img src="../../assets/img/Vector.png" class='Vector'></span>
+    <span class='language'>{{item.language}}</span>
+</div>

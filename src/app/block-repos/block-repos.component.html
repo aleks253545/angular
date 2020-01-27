@@ -1,0 +1,18 @@
+<div class='more'>
+    <span class='language'>{{item.language}}</span>
+    <span class='likes'><span>{{item.watchers}}</span> <img  src='../../assets/img/Vector.png' class='Vector'></span>
+</div> 
+<div class='info'>
+    <h3 class='name'>{{item.name}}</h3>
+    <span class='subname'>{{item.description}}</span>
+    <div class='tags'>
+        <div class='tag' *ngIf='item.tag'>{{item.tag}}</div>
+        <div class='tag'>{{item.language}}</div>
+    </div>
+</div>
+<button class='btn_like' 
+[class.delete]='item.like===true' (click)="onChangeLike(item.id)"><span *ngIf='!item.like; else remove'>Add to List</span></button>
+
+<ng-template #remove>
+    <span>Remove from list</span>
+</ng-template>

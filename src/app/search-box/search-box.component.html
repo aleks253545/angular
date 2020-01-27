@@ -1,0 +1,22 @@
+    <app-search-bar class='search-bar' ></app-search-bar>
+    <div class='not-found'*ngIf="repos.length===0;else result">
+        <h2 class="not-found_title" >No Result found</h2>
+        <span class="not-found_text">select other parametres and try again</span>
+    </div>
+    <ng-template #result>
+    <app-display-bar class='display-bar' ></app-display-bar>
+    <div class='search-box_repos-block' *ngIf="display==='block'; else lineRep">
+        <app-block-repos class="block-repos" 
+        *ngFor="let item of repos.slice(0,viewIndex)"
+        [item]='item' ></app-block-repos>
+    </div>
+    </ng-template>
+    <ng-template #lineRep >
+        <div class='search-box_repos-line'>
+            <app-line-repos class='repos'
+            *ngFor="let item of repos.slice(0,viewIndex)"
+            [item]='item' 
+            ></app-line-repos>
+        </div>
+    </ng-template>
+    
