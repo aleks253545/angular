@@ -12,7 +12,7 @@ export class BlockReposComponent implements OnInit {
 
   ngOnInit() {
   }
-  onChangeLike(id){
+  onChangeLike(id):void{
     this.reposService.changeLike(id);
   }
 }
