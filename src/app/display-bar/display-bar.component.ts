@@ -9,7 +9,7 @@ export class DisplayBarComponent implements OnInit {
   constructor(private reposService:ReposService ) { }
   ngOnInit() {
   }
-  changeDisplay(value:string){
+  changeDisplay(value:String):void{
     this.reposService.setDisplay(value);
   }
 }

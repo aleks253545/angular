@@ -17,10 +17,10 @@ export class ReposService {
   private $ChangeMyList = new Subject<any>();
   private $ChangeDisplay = new Subject<any>();
   constructor() { }
-  repos =[];
-  myList=[];
-  display='block';
-  viewIndex=4;
+  repos: Repositories []= [];
+  myList: Repositories [] =[];
+  display: String='block';
+  viewIndex: Number=4;
 
   setRepos(e){
     return fetch(`https://api.github.com/search/repositories?q=${e.tag}+language:${e.language}`)
@@ -41,21 +41,20 @@ export class ReposService {
   getMyList():Subject <Repositories []>{
       return this.$ChangeMyList
   }
-  setDisplay(value){
+  setDisplay(value):void{
     this.display=value;
     this.$ChangeDisplay.next(this.display);
   }
-  getDispaly(){
+  getDispaly():Subject <Repositories []>{
     return this.$ChangeDisplay
   }
-  changeLike(id){
+  changeLike(id:number):void{
     this.repos.forEach((item,index)=>{
       if(item.id===id){
         item.like=!item.like
       if(item.like){
         this.myList.push(item);
       }else if(!item.like){
-        console.log(item.like)
         this.myList.forEach((item,index)=>{
           if(item.id===id)
             this.myList.splice(index,1)

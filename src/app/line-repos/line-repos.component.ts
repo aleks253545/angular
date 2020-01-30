@@ -11,7 +11,7 @@ export class LineReposComponent implements OnInit {
 
   ngOnInit() {
   }
-  clickLike(id){
+  clickLike(id:Number):void{
     this.reposService.changeLike(id)
   }
 }

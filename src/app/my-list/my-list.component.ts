@@ -6,9 +6,9 @@ import {ReposService} from '../repos.service';
   styleUrls: ['./my-list.component.scss']
 })
 export class MyListComponent implements OnInit {
-  viewIndex=4;
-  display;
-  repos=[];
+  viewIndex:number=4;
+  display:string;
+  repos:Object[]=[];
   constructor(private reposService:ReposService ) {
   }
   

@@ -7,9 +7,9 @@ import {ReposService} from '../repos.service';
 })
 export class SearchBoxComponent implements OnInit {
 
-  viewIndex=4;
-  display;
-  repos=[];
+  viewInde:number=4;
+  display:string;
+  repos:Object[]=[];
   constructor(private reposService:ReposService ) {
   }
   
