@@ -1,4 +1,4 @@
-import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {ReposService} from '../repos.service';
 @Component({
   selector: 'app-search-box',
@@ -7,15 +7,15 @@ import {ReposService} from '../repos.service';
 })
 export class SearchBoxComponent implements OnInit {
 
-  viewInde:number=4;
-  display:string;
-  repos:Object[]=[];
-  constructor(private reposService:ReposService ) {
+  viewIndex = 4;
+  display: string;
+  repos: object[] = [];
+  constructor(private reposService: ReposService ) {
   }
-  
+
   ngOnInit() {
-    this.reposService.getRepos().subscribe(data=>this.repos=data);
-    this.reposService.getDispaly().subscribe(data=>this.display=data);
+    this.reposService.getRepos().subscribe(data => this.repos = data);
+    this.reposService.getDispaly().subscribe(data => this.display = data);
     this.reposService.onRoute();
   }
 

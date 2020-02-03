@@ -1,5 +1,5 @@
-import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
-import {Repositories,ReposService} from '../repos.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Repositories, ReposService} from '../repos.service';
 
 @Component({
   selector: 'app-block-repos',
@@ -7,12 +7,12 @@ import {Repositories,ReposService} from '../repos.service';
   styleUrls: ['./block-repos.component.scss']
 })
 export class BlockReposComponent implements OnInit {
-  @Input() item:Repositories;
-  constructor(private reposService:ReposService ) { }
+  @Input() item: Repositories;
+  constructor(private reposService: ReposService ) { }
 
   ngOnInit() {
   }
-  onChangeLike(id):void{
+  onChangeLike(id): void {
     this.reposService.changeLike(id);
   }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
-import {ReposService} from '../repos.service'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {ReposService} from '../repos.service';
 @Component({
   selector: 'app-line-repos',
   templateUrl: './line-repos.component.html',
@@ -7,11 +7,11 @@ import {ReposService} from '../repos.service'
 })
 export class LineReposComponent implements OnInit {
   @Input() item;
-  constructor(private reposService:ReposService ) { }
+  constructor(private reposService: ReposService ) { }
 
   ngOnInit() {
   }
-  clickLike(id:Number):void{
-    this.reposService.changeLike(id)
+  clickLike(id: number): void {
+    this.reposService.changeLike(id);
   }
 }

@@ -1,15 +1,15 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
-import {ReposService} from '../repos.service'
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {ReposService} from '../repos.service';
 @Component({
   selector: 'app-display-bar',
   templateUrl: './display-bar.component.html',
   styleUrls: ['./display-bar.component.scss']
 })
 export class DisplayBarComponent implements OnInit {
-  constructor(private reposService:ReposService ) { }
+  constructor(private reposService: ReposService ) { }
   ngOnInit() {
   }
-  changeDisplay(value:String):void{
+  changeDisplay(value: string): void {
     this.reposService.setDisplay(value);
   }
 }

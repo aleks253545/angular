@@ -1,5 +1,5 @@
-import { Component, OnInit,Output, EventEmitter } from '@angular/core';
-import {ReposService} from "../repos.service"
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {ReposService} from '../repos.service';
 
 
 @Component({
@@ -8,14 +8,14 @@ import {ReposService} from "../repos.service"
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
-  constructor(private reposService:ReposService) { 
+  constructor(private reposService: ReposService) {
   }
-  tagValue: String =''
-  languageValue: String =''
+  tagValue = '';
+  languageValue = '';
   ngOnInit() {
   }
-  sendInfo(){
-    this.reposService.setRepos({tag:this.tagValue,language:this.languageValue});
+  sendInfo() {
+    this.reposService.setRepos({tag: this.tagValue, language: this.languageValue});
   }
 
 }

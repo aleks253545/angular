@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { DisplayBarComponent } from '../display-bar/display-bar.component';
 import {LineReposComponent} from '../line-repos/line-repos.component';
-import {BlockReposComponent}from '../block-repos/block-repos.component';
+import {BlockReposComponent} from '../block-repos/block-repos.component';
 
 
 @NgModule({
